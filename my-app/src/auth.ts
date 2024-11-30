@@ -32,6 +32,7 @@ export const {
                         );
 
                         if (isMatch) {
+                            console.log(user.username);
                             return {
                                 id: user._id.toString(),
                                 username: user.username,

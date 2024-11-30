@@ -38,7 +38,7 @@ export default function LoginForm() {
     };
 
     return(
-        <form className="px-5 w-1/2 flex flex-col gap-y-5">
+        <form className="w-1/2 flex flex-col gap-y-5">
             <h1 className="text-3xl font-semibold">Login</h1>
 
             <div className="flex flex-row gap-x-5 w-52">
