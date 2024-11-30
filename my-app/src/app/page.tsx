@@ -7,6 +7,7 @@ export default async function Home() {
   const session = await auth();
   const loggedInUser = session?.user;
   const username = loggedInUser?.name;
+  console.log(username)
 
   
   return (

@@ -3,6 +3,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 
 
+
 import { signIn } from "next-auth/react";
 
 export default function LoginForm() {
@@ -24,8 +25,8 @@ export default function LoginForm() {
     
         try {
             const respone = await signIn("credentials", {
-                enteredUsername,
-                enteredPassword,
+                username: enteredUsername,
+                password: enteredPassword,
                 redirect: false,
             });
         } catch (err: any) {
@@ -41,9 +42,9 @@ export default function LoginForm() {
             <h1 className="text-3xl font-semibold">Login</h1>
 
             <div className="flex flex-row gap-x-5 w-52">
-                <input className={`${inputStyle}`} id="username" type="text" placeholder="Username" value={enteredUsername} onChange={handleUsernameChange} required />
+                <input className={`${inputStyle}`} id="login-username" type="text" placeholder="Username" value={enteredUsername} onChange={handleUsernameChange} required />
 
-                <input className={`${inputStyle}`} id="password" type="password" placeholder="Password" value={enteredPassword} onChange={handlePasswordChange} required />
+                <input className={`${inputStyle}`} id="login-password" type="password" placeholder="Password" value={enteredPassword} onChange={handlePasswordChange} required />
             </div>
 
             <button className="bg-slate-900 text-white rounded-md px-3 py-2 w-20 hover:bg-slate-700" onClick={submitHandler}>Login</button>

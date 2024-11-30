@@ -50,9 +50,9 @@ export default function SignupForm() {
             <h1 className="text-3xl font-semibold">Create a new account</h1>
 
             <div className="flex flex-row gap-x-5 w-52">
-                <input className={`${inputStyle}`} id="username" type="text" placeholder="Username" value={enteredUsername} onChange={handleUsernameChange} required />
+                <input className={`${inputStyle}`} id="sign-username" type="text" placeholder="Username" value={enteredUsername} onChange={handleUsernameChange} required />
 
-                <input className={`${inputStyle}`} id="password" type="password" placeholder="Password" value={enteredPassword} onChange={handlePasswordChange} required />
+                <input className={`${inputStyle}`} id="sign-password" type="password" placeholder="Password" value={enteredPassword} onChange={handlePasswordChange} required />
             </div>
 
             <button className="bg-slate-900 text-white rounded-md px-3 py-2 w-20 hover:bg-slate-700" onClick={submitHandler}>Create</button>
