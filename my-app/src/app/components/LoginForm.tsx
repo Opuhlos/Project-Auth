@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
-
-
+import { useRouter } from "next/navigation";
 
 import { signIn } from "next-auth/react";
 
 export default function LoginForm() {
+    const router = useRouter();
+
     const inputStyle = "border-0 border-b-[3px] focus:outline-none"
 
     const [enteredUsername, setUsername] = useState<string>('');
@@ -35,6 +36,8 @@ export default function LoginForm() {
 
         setUsername('');
         setPassword('');
+
+        router.push("/")
     };
 
     return(
