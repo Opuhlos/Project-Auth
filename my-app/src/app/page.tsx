@@ -1,19 +1,12 @@
 import SignupForm from "./components/SignupForm";
 import LoginForm from "./components/LoginForm";
-import { auth } from "@/auth";
-import Image from "next/image";
+import Display from "./components/Display";
 
-export default async function Home() {
-  const session = await auth();
-  const loggedInUser = session?.user;
-  const username = loggedInUser?.name;
-  console.log(username)
-
-  
+export default function Home() {
   return (
     <div className="h-screen flex flex-row">
 
-        {username ? <img src="images/hnk.jpg" alt="picture"> </img> : <div className="w-1/2 bg-sky-600"> </div>}
+        <Display/>
 
         <div className="w-1/2 flex flex-col">
           <SignupForm/>
