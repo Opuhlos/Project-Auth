@@ -5,5 +5,4 @@ export const authConfig: NextAuthConfig = {
         strategy: "jwt",
     },
     providers: [],
-    }
 };

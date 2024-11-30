@@ -1,6 +1,6 @@
 import { authConfig } from "./auth.config";
 import NextAuth from "next-auth";
-import CredentialsProvider from "next/auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { User } from "./models/userSchema";
 
@@ -35,11 +35,11 @@ export const {
                                 username: user.username,
                             };
                         } else {
-                            alert("Email or Password is not correct");
+                            console.log("Email or Password is not correct");
                             return null;
                         }
                     } else {
-                        alert("User not found");
+                        console.log("User not found");
                         return null
                     }
                 } catch (error: any) {
